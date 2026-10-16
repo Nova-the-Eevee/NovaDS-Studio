@@ -1,0 +1,14 @@
+mtllib ship.mtl
+v 0 0 1.5
+v -1 -.25 -.8
+v 1 -.25 -.8
+v 0 .35 -.5
+v 0 -.4 -0.5
+usemtl Hull
+f 1 2 4
+f 1 4 3
+f 1 3 5
+f 1 5 2
+usemtl Trim
+f 2 5 3
+f 2 3 4

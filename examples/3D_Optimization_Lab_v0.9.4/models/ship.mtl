@@ -1,0 +1,4 @@
+newmtl Hull
+Kd 0.22 0.70 0.87
+newmtl Trim
+Kd 1.0 0.75 0.25

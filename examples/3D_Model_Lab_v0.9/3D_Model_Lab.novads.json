@@ -1,0 +1,125 @@
+{
+  "format": "novads-project",
+  "version": 5,
+  "name": "3D Model Lab",
+  "mode": "3d2d",
+  "background_top": "#88B5D4",
+  "background_bottom": "#263C58",
+  "mesh_assets": {
+    "torus": {
+      "path": "models/torus.obj",
+      "target_triangles": 220
+    },
+    "ship": {
+      "path": "models/ship.obj",
+      "target_triangles": 0
+    }
+  },
+  "camera_3d": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 6.3,
+    "yaw": 0.0,
+    "pitch": 0.0,
+    "fov": 65.0
+  },
+  "assets": {
+    "nova": {
+      "path": ":builtin/nova.png"
+    }
+  },
+  "background_layers": {},
+  "extra_background_layers": {},
+  "camera_follow": {},
+  "objects": [
+    {
+      "id": 1,
+      "type": "Mesh3D",
+      "name": "Simplified Torus",
+      "screen": "top",
+      "mesh": "torus",
+      "x": -1.5,
+      "y": 0.0,
+      "z": 0.0,
+      "size": 1.7,
+      "spin": 0.6,
+      "rot_x": 0.0,
+      "rot_y": 0.0,
+      "rot_z": 0.0,
+      "color": "#F0B475",
+      "script": "scripts/camera.lua",
+      "scene": "Main"
+    },
+    {
+      "id": 2,
+      "type": "Mesh3D",
+      "name": "Ship with MTL colors",
+      "screen": "top",
+      "mesh": "ship",
+      "x": 1.5,
+      "y": 0.0,
+      "z": 0.0,
+      "size": 1.7,
+      "spin": -0.6,
+      "rot_x": 0.0,
+      "rot_y": 0.0,
+      "rot_z": 0.0,
+      "color": "#E4B475",
+      "scene": "Main",
+      "script": ""
+    },
+    {
+      "id": 3,
+      "type": "Cube3D",
+      "name": "Original Cube",
+      "screen": "top",
+      "x": 0.0,
+      "y": -1.2,
+      "z": -1.5,
+      "size": 0.7,
+      "spin": 0.6,
+      "color": "#A4E4DC",
+      "scene": "Main",
+      "script": ""
+    },
+    {
+      "id": 4,
+      "type": "Sprite2D",
+      "name": "Nova bottom",
+      "screen": "bottom",
+      "x": 118,
+      "y": 76,
+      "speed": 2,
+      "controllable": true,
+      "asset": "nova",
+      "color": "#FFFFFF",
+      "scene": "Main",
+      "script": "",
+      "angle": 0.0,
+      "scale_x": 1.0,
+      "scale_y": 1.0,
+      "fps": 0.0,
+      "flip_x": false,
+      "flip_y": false,
+      "loop": true,
+      "frame": 0,
+      "collider": false,
+      "solid": false,
+      "trigger": false,
+      "physics": false,
+      "collider_width": 0,
+      "collider_height": 0,
+      "collision_layer": 1,
+      "collision_mask": 255,
+      "velocity_x": 0.0,
+      "velocity_y": 0.0,
+      "gravity": 0.0,
+      "friction": 0.0
+    }
+  ],
+  "scenes": [
+    "Main"
+  ],
+  "active_scene": "Main",
+  "sounds": {}
+}
