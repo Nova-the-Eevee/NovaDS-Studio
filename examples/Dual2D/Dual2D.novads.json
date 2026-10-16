@@ -1,0 +1,41 @@
+{
+  "format": "novads-project",
+  "version": 4,
+  "name": "Dual 2D Test",
+  "mode": "2d2d",
+  "background_top": "#88B5D4",
+  "background_bottom": "#263C58",
+  "assets": {
+    "nova": {
+      "path": ":builtin/nova.png"
+    }
+  },
+  "objects": [
+    {
+      "id": 2,
+      "type": "Sprite2D",
+      "name": "Nova",
+      "screen": "bottom",
+      "x": 110,
+      "y": 88,
+      "speed": 2,
+      "controllable": true,
+      "asset": "nova",
+      "color": "#FFFFFF",
+      "script": ""
+    },
+    {
+      "id": 3,
+      "type": "Sprite2D",
+      "name": "Second Nova",
+      "screen": "top",
+      "x": 92,
+      "y": 48,
+      "speed": 0,
+      "controllable": false,
+      "asset": "nova",
+      "color": "#FFFFFF",
+      "script": ""
+    }
+  ]
+}

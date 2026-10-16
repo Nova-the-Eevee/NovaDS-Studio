@@ -1,0 +1,846 @@
+{
+  "format": "novads-project",
+  "version": 5,
+  "name": "NovaDS - Novas Star Trail",
+  "mode": "3d2d",
+  "background_top": "#779FCB",
+  "background_bottom": "#20344E",
+  "camera_3d": {
+    "x": 0,
+    "y": 2.8,
+    "z": 8.5,
+    "yaw": 0,
+    "pitch": -16,
+    "fov": 64,
+    "frustum_culling": true,
+    "fog_enabled": false,
+    "fog_color": "#7AA4CA",
+    "fog_strength": 0.48,
+    "brightness": 1.0,
+    "profiler": true
+  },
+  "mesh_assets": {
+    "fox": {
+      "path": "models/nova_fox.obj",
+      "target_triangles": 0,
+      "lod_triangles": 0,
+      "texture": ""
+    },
+    "grass": {
+      "path": "models/grass_field.obj",
+      "target_triangles": 0,
+      "lod_triangles": 0,
+      "texture": ""
+    },
+    "crystal": {
+      "path": "models/crystal.obj",
+      "target_triangles": 0,
+      "lod_triangles": 0,
+      "texture": ""
+    },
+    "portal": {
+      "path": "models/portal.obj",
+      "target_triangles": 0,
+      "lod_triangles": 0,
+      "texture": ""
+    }
+  },
+  "assets": {
+    "nova": {
+      "path": "assets/nova_icon.png"
+    }
+  },
+  "background_layers": {},
+  "extra_background_layers": {},
+  "camera_follow": {},
+  "scenes": [
+    "Title",
+    "Level",
+    "Win",
+    "Lose"
+  ],
+  "active_scene": "Title",
+  "sounds": {
+    "collect": {
+      "path": "audio/collect.wav"
+    },
+    "start": {
+      "path": "audio/start.wav"
+    },
+    "win": {
+      "path": "audio/win.wav"
+    },
+    "ouch": {
+      "path": "audio/ouch.wav"
+    }
+  },
+  "objects": [
+    {
+      "id": 101,
+      "type": "Mesh3D",
+      "name": "Title Nova",
+      "screen": "top",
+      "scene": "Title",
+      "mesh": "fox",
+      "x": 0,
+      "y": 0.1,
+      "z": 0,
+      "size": 1.25,
+      "spin": 0,
+      "rot_x": 0,
+      "rot_y": 0,
+      "rot_z": 0,
+      "color": "#FFFFFF",
+      "script": "",
+      "animation3d": {
+        "name": "Hello",
+        "fps": 24,
+        "duration": 48,
+        "loop": true,
+        "autoplay": true,
+        "keys": [
+          {
+            "frame": 0,
+            "y": 0,
+            "yaw": -13
+          },
+          {
+            "frame": 24,
+            "y": 0.25,
+            "yaw": 13
+          },
+          {
+            "frame": 48,
+            "y": 0,
+            "yaw": -13
+          }
+        ],
+        "mesh_frames": []
+      }
+    },
+    {
+      "id": 102,
+      "type": "Mesh3D",
+      "name": "Title crystal",
+      "screen": "top",
+      "scene": "Title",
+      "mesh": "crystal",
+      "x": -2.0,
+      "y": 0.25,
+      "z": -1,
+      "size": 0.65,
+      "spin": 0,
+      "rot_x": 0,
+      "rot_y": 0,
+      "rot_z": 0,
+      "color": "#FFFFFF",
+      "script": "",
+      "animation3d": {
+        "name": "Shimmer",
+        "fps": 30,
+        "loop": true,
+        "autoplay": true,
+        "duration": 60,
+        "keys": [
+          {
+            "frame": 0,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "yaw": 0,
+            "scale": 1
+          },
+          {
+            "frame": 30,
+            "x": 0,
+            "y": 0.15,
+            "z": 0,
+            "yaw": 180,
+            "scale": 1.12
+          },
+          {
+            "frame": 60,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "yaw": 360,
+            "scale": 1
+          }
+        ],
+        "mesh_frames": []
+      }
+    },
+    {
+      "id": 103,
+      "type": "Mesh3D",
+      "name": "Title crystal",
+      "screen": "top",
+      "scene": "Title",
+      "mesh": "crystal",
+      "x": 2.0,
+      "y": 0.25,
+      "z": -1,
+      "size": 0.65,
+      "spin": 0,
+      "rot_x": 0,
+      "rot_y": 0,
+      "rot_z": 0,
+      "color": "#FFFFFF",
+      "script": "",
+      "animation3d": {
+        "name": "Shimmer",
+        "fps": 30,
+        "loop": true,
+        "autoplay": true,
+        "duration": 60,
+        "keys": [
+          {
+            "frame": 0,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "yaw": 0,
+            "scale": 1
+          },
+          {
+            "frame": 30,
+            "x": 0,
+            "y": 0.15,
+            "z": 0,
+            "yaw": 180,
+            "scale": 1.12
+          },
+          {
+            "frame": 60,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "yaw": 360,
+            "scale": 1
+          }
+        ],
+        "mesh_frames": []
+      }
+    },
+    {
+      "id": 109,
+      "type": "Sprite2D",
+      "name": "Nova HUD mascot",
+      "screen": "bottom",
+      "scene": "Title",
+      "x": 214,
+      "y": 144,
+      "asset": "nova",
+      "speed": 0,
+      "controllable": false,
+      "color": "#FFFFFF",
+      "script": "scripts/title.lua"
+    },
+    {
+      "id": 2,
+      "type": "Mesh3D",
+      "name": "Textured meadow floor",
+      "screen": "top",
+      "scene": "Level",
+      "mesh": "grass",
+      "x": 0,
+      "y": -0.1,
+      "z": 0,
+      "size": 4.55,
+      "spin": 0,
+      "rot_x": 0,
+      "rot_y": 0,
+      "rot_z": 0,
+      "color": "#FFFFFF",
+      "script": "",
+      "collider3d": true,
+      "solid3d": true,
+      "half_x3d": 4.5,
+      "half_y3d": 0.1,
+      "half_z3d": 4.5
+    },
+    {
+      "id": 1,
+      "type": "Mesh3D",
+      "name": "Playable Nova",
+      "screen": "top",
+      "scene": "Level",
+      "mesh": "fox",
+      "x": 0,
+      "y": 1.4,
+      "z": 3.7,
+      "size": 0.44,
+      "spin": 0,
+      "rot_x": 0,
+      "rot_y": 0,
+      "rot_z": 0,
+      "color": "#FFFFFF",
+      "script": "scripts/player.lua",
+      "collider3d": true,
+      "physics3d": true,
+      "half_x3d": 0.27,
+      "half_y3d": 0.35,
+      "half_z3d": 0.27,
+      "gravity3d": -13
+    },
+    {
+      "id": 11,
+      "type": "Cube3D",
+      "name": "North fence",
+      "screen": "top",
+      "scene": "Level",
+      "x": 0,
+      "y": 0.45,
+      "z": -4.6,
+      "size": 0.85,
+      "spin": 0,
+      "color": "#88A9C3",
+      "collider3d": true,
+      "solid3d": true,
+      "half_x3d": 4.4,
+      "half_y3d": 0.65,
+      "half_z3d": 0.15
+    },
+    {
+      "id": 12,
+      "type": "Cube3D",
+      "name": "South fence",
+      "screen": "top",
+      "scene": "Level",
+      "x": 0,
+      "y": 0.45,
+      "z": 4.6,
+      "size": 0.85,
+      "spin": 0,
+      "color": "#88A9C3",
+      "collider3d": true,
+      "solid3d": true,
+      "half_x3d": 4.4,
+      "half_y3d": 0.65,
+      "half_z3d": 0.15
+    },
+    {
+      "id": 13,
+      "type": "Cube3D",
+      "name": "Side fence",
+      "screen": "top",
+      "scene": "Level",
+      "x": -4.6,
+      "y": 0.45,
+      "z": 0,
+      "size": 0.85,
+      "spin": 0,
+      "color": "#88A9C3",
+      "collider3d": true,
+      "solid3d": true,
+      "half_x3d": 0.15,
+      "half_y3d": 0.65,
+      "half_z3d": 4.5
+    },
+    {
+      "id": 14,
+      "type": "Cube3D",
+      "name": "Side fence",
+      "screen": "top",
+      "scene": "Level",
+      "x": 4.6,
+      "y": 0.45,
+      "z": 0,
+      "size": 0.85,
+      "spin": 0,
+      "color": "#88A9C3",
+      "collider3d": true,
+      "solid3d": true,
+      "half_x3d": 0.15,
+      "half_y3d": 0.65,
+      "half_z3d": 4.5
+    },
+    {
+      "id": 15,
+      "type": "Cube3D",
+      "name": "Jumpable crate",
+      "screen": "top",
+      "scene": "Level",
+      "x": 0,
+      "y": 0.35,
+      "z": 1.5,
+      "size": 0.72,
+      "spin": 0,
+      "color": "#AD8C65",
+      "collider3d": true,
+      "solid3d": true,
+      "half_x3d": 0.36,
+      "half_y3d": 0.36,
+      "half_z3d": 0.36
+    },
+    {
+      "id": 16,
+      "type": "Cube3D",
+      "name": "Jumpable crate",
+      "screen": "top",
+      "scene": "Level",
+      "x": 1.0,
+      "y": 0.39,
+      "z": -1.0,
+      "size": 0.8,
+      "spin": 0,
+      "color": "#AE936B",
+      "collider3d": true,
+      "solid3d": true,
+      "half_x3d": 0.4,
+      "half_y3d": 0.4,
+      "half_z3d": 0.4
+    },
+    {
+      "id": 17,
+      "type": "Cube3D",
+      "name": "Jumpable crate",
+      "screen": "top",
+      "scene": "Level",
+      "x": -1.4,
+      "y": 0.315,
+      "z": -0.4,
+      "size": 0.65,
+      "spin": 0,
+      "color": "#7C99A8",
+      "collider3d": true,
+      "solid3d": true,
+      "half_x3d": 0.325,
+      "half_y3d": 0.325,
+      "half_z3d": 0.325
+    },
+    {
+      "id": 20,
+      "type": "Mesh3D",
+      "name": "Crystal 20",
+      "screen": "top",
+      "scene": "Level",
+      "mesh": "crystal",
+      "x": -1.45,
+      "y": 0.62,
+      "z": 2.5,
+      "size": 0.47,
+      "spin": 0,
+      "rot_x": 0,
+      "rot_y": 0,
+      "rot_z": 0,
+      "color": "#FFFFFF",
+      "script": "",
+      "animation3d": {
+        "name": "Shimmer",
+        "fps": 30,
+        "loop": true,
+        "autoplay": true,
+        "duration": 60,
+        "keys": [
+          {
+            "frame": 0,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "yaw": 0,
+            "scale": 1
+          },
+          {
+            "frame": 30,
+            "x": 0,
+            "y": 0.15,
+            "z": 0,
+            "yaw": 180,
+            "scale": 1.12
+          },
+          {
+            "frame": 60,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "yaw": 360,
+            "scale": 1
+          }
+        ],
+        "mesh_frames": []
+      },
+      "collider3d": true,
+      "trigger3d": true,
+      "half_x3d": 0.52,
+      "half_y3d": 0.52,
+      "half_z3d": 0.52
+    },
+    {
+      "id": 21,
+      "type": "Mesh3D",
+      "name": "Crystal 21",
+      "screen": "top",
+      "scene": "Level",
+      "mesh": "crystal",
+      "x": 1.5,
+      "y": 0.62,
+      "z": 0.0,
+      "size": 0.47,
+      "spin": 0,
+      "rot_x": 0,
+      "rot_y": 0,
+      "rot_z": 0,
+      "color": "#FFFFFF",
+      "script": "",
+      "animation3d": {
+        "name": "Shimmer",
+        "fps": 30,
+        "loop": true,
+        "autoplay": true,
+        "duration": 60,
+        "keys": [
+          {
+            "frame": 0,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "yaw": 0,
+            "scale": 1
+          },
+          {
+            "frame": 30,
+            "x": 0,
+            "y": 0.15,
+            "z": 0,
+            "yaw": 180,
+            "scale": 1.12
+          },
+          {
+            "frame": 60,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "yaw": 360,
+            "scale": 1
+          }
+        ],
+        "mesh_frames": []
+      },
+      "collider3d": true,
+      "trigger3d": true,
+      "half_x3d": 0.52,
+      "half_y3d": 0.52,
+      "half_z3d": 0.52
+    },
+    {
+      "id": 22,
+      "type": "Mesh3D",
+      "name": "Crystal 22",
+      "screen": "top",
+      "scene": "Level",
+      "mesh": "crystal",
+      "x": -0.5,
+      "y": 0.62,
+      "z": -2.5,
+      "size": 0.47,
+      "spin": 0,
+      "rot_x": 0,
+      "rot_y": 0,
+      "rot_z": 0,
+      "color": "#FFFFFF",
+      "script": "",
+      "animation3d": {
+        "name": "Shimmer",
+        "fps": 30,
+        "loop": true,
+        "autoplay": true,
+        "duration": 60,
+        "keys": [
+          {
+            "frame": 0,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "yaw": 0,
+            "scale": 1
+          },
+          {
+            "frame": 30,
+            "x": 0,
+            "y": 0.15,
+            "z": 0,
+            "yaw": 180,
+            "scale": 1.12
+          },
+          {
+            "frame": 60,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "yaw": 360,
+            "scale": 1
+          }
+        ],
+        "mesh_frames": []
+      },
+      "collider3d": true,
+      "trigger3d": true,
+      "half_x3d": 0.52,
+      "half_y3d": 0.52,
+      "half_z3d": 0.52
+    },
+    {
+      "id": 31,
+      "type": "Mesh3D",
+      "name": "Exit arch",
+      "screen": "top",
+      "scene": "Level",
+      "mesh": "portal",
+      "x": 0,
+      "y": 0.85,
+      "z": -3.78,
+      "size": 1.25,
+      "spin": 0,
+      "rot_x": 0,
+      "rot_y": 0,
+      "rot_z": 0,
+      "color": "#FFFFFF",
+      "script": ""
+    },
+    {
+      "id": 30,
+      "type": "Cube3D",
+      "name": "Exit gate trigger",
+      "screen": "top",
+      "scene": "Level",
+      "x": 0,
+      "y": 0.72,
+      "z": -3.78,
+      "size": 0.55,
+      "spin": 0,
+      "color": "#48BBD1",
+      "collider3d": true,
+      "trigger3d": true,
+      "half_x3d": 0.68,
+      "half_y3d": 0.77,
+      "half_z3d": 0.43
+    },
+    {
+      "id": 40,
+      "type": "Cube3D",
+      "name": "Red hazard",
+      "screen": "top",
+      "scene": "Level",
+      "x": -2.3,
+      "y": 0.4,
+      "z": -1.25,
+      "size": 0.63,
+      "spin": 0,
+      "color": "#F35A62",
+      "collider3d": true,
+      "trigger3d": true,
+      "half_x3d": 0.43,
+      "half_y3d": 0.42,
+      "half_z3d": 0.43
+    },
+    {
+      "id": 41,
+      "type": "Cube3D",
+      "name": "Red hazard",
+      "screen": "top",
+      "scene": "Level",
+      "x": 2.6,
+      "y": 0.4,
+      "z": 1.0,
+      "size": 0.63,
+      "spin": 0,
+      "color": "#F35A62",
+      "collider3d": true,
+      "trigger3d": true,
+      "half_x3d": 0.43,
+      "half_y3d": 0.42,
+      "half_z3d": 0.43
+    },
+    {
+      "id": 50,
+      "type": "Cube3D",
+      "name": "Blue light",
+      "screen": "top",
+      "scene": "Level",
+      "x": -2.1,
+      "y": 0.5,
+      "z": -3.85,
+      "size": 0.65,
+      "spin": 0.45,
+      "color": "#74D8E8"
+    },
+    {
+      "id": 51,
+      "type": "Cube3D",
+      "name": "Blue light",
+      "screen": "top",
+      "scene": "Level",
+      "x": 2.1,
+      "y": 0.5,
+      "z": -3.85,
+      "size": 0.65,
+      "spin": 0.45,
+      "color": "#74D8E8"
+    },
+    {
+      "id": 70,
+      "type": "Sprite2D",
+      "name": "Nova HUD mascot",
+      "screen": "bottom",
+      "scene": "Level",
+      "x": 216,
+      "y": 140,
+      "asset": "nova",
+      "speed": 0,
+      "controllable": false,
+      "color": "#FFFFFF",
+      "script": ""
+    },
+    {
+      "id": 201,
+      "type": "Mesh3D",
+      "name": "Winning Nova",
+      "screen": "top",
+      "scene": "Win",
+      "mesh": "fox",
+      "x": 0,
+      "y": 0.2,
+      "z": 0,
+      "size": 1.25,
+      "spin": 0,
+      "rot_x": 0,
+      "rot_y": 0,
+      "rot_z": 0,
+      "color": "#FFFFFF",
+      "script": "",
+      "animation3d": {
+        "name": "Shimmer",
+        "fps": 30,
+        "loop": true,
+        "autoplay": true,
+        "duration": 60,
+        "keys": [
+          {
+            "frame": 0,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "yaw": 0,
+            "scale": 1
+          },
+          {
+            "frame": 30,
+            "x": 0,
+            "y": 0.15,
+            "z": 0,
+            "yaw": 180,
+            "scale": 1.12
+          },
+          {
+            "frame": 60,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "yaw": 360,
+            "scale": 1
+          }
+        ],
+        "mesh_frames": []
+      }
+    },
+    {
+      "id": 202,
+      "type": "Mesh3D",
+      "name": "Winning gem",
+      "screen": "top",
+      "scene": "Win",
+      "mesh": "crystal",
+      "x": -1.75,
+      "y": 0.25,
+      "z": -0.8,
+      "size": 0.72,
+      "spin": 0,
+      "rot_x": 0,
+      "rot_y": 0,
+      "rot_z": 0,
+      "color": "#FFFFFF",
+      "script": "",
+      "animation3d": {
+        "name": "Shimmer",
+        "fps": 30,
+        "loop": true,
+        "autoplay": true,
+        "duration": 60,
+        "keys": [
+          {
+            "frame": 0,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "yaw": 0,
+            "scale": 1
+          },
+          {
+            "frame": 30,
+            "x": 0,
+            "y": 0.15,
+            "z": 0,
+            "yaw": 180,
+            "scale": 1.12
+          },
+          {
+            "frame": 60,
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "yaw": 360,
+            "scale": 1
+          }
+        ],
+        "mesh_frames": []
+      }
+    },
+    {
+      "id": 209,
+      "type": "Sprite2D",
+      "name": "Nova HUD mascot",
+      "screen": "bottom",
+      "scene": "Win",
+      "x": 217,
+      "y": 143,
+      "asset": "nova",
+      "speed": 0,
+      "controllable": false,
+      "color": "#FFFFFF",
+      "script": "scripts/win.lua"
+    },
+    {
+      "id": 301,
+      "type": "Mesh3D",
+      "name": "Retry Nova",
+      "screen": "top",
+      "scene": "Lose",
+      "mesh": "fox",
+      "x": 0,
+      "y": -0.1,
+      "z": 0,
+      "size": 0.9,
+      "spin": 0,
+      "rot_x": 0,
+      "rot_y": 0,
+      "rot_z": 0,
+      "color": "#FFFFFF",
+      "script": ""
+    },
+    {
+      "id": 309,
+      "type": "Sprite2D",
+      "name": "Nova HUD mascot",
+      "screen": "bottom",
+      "scene": "Lose",
+      "x": 217,
+      "y": 143,
+      "asset": "nova",
+      "speed": 0,
+      "controllable": false,
+      "color": "#FFFFFF",
+      "script": "scripts/lose.lua"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "format": "novads-project",
+  "version": 5,
+  "name": "NovaDS - Menu, Audio and Scenes",
+  "mode": "2d2d",
+  "background_top": "#5586A0",
+  "background_bottom": "#253B55",
+  "assets": {
+    "nova": {
+      "path": ":builtin/nova.png"
+    }
+  },
+  "background_layers": {},
+  "extra_background_layers": {},
+  "camera_follow": {},
+  "objects": [
+    {
+      "id": 1,
+      "type": "Sprite2D",
+      "name": "Menu Nova",
+      "screen": "bottom",
+      "x": 118,
+      "y": 105,
+      "speed": 0,
+      "controllable": false,
+      "asset": "nova",
+      "color": "#FFFFFF",
+      "scene": "Menu",
+      "script": "scripts/menu.lua"
+    },
+    {
+      "id": 2,
+      "type": "Sprite2D",
+      "name": "Game Nova",
+      "screen": "bottom",
+      "x": 110,
+      "y": 92,
+      "speed": 0,
+      "controllable": false,
+      "asset": "nova",
+      "color": "#FFFFFF",
+      "scene": "Game",
+      "script": "scripts/game.lua"
+    }
+  ],
+  "scenes": [
+    "Menu",
+    "Game"
+  ],
+  "active_scene": "Menu",
+  "sounds": {
+    "select": {
+      "path": "sounds/select.wav"
+    }
+  }
+}

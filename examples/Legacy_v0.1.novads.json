@@ -1,0 +1,33 @@
+{
+  "format": "novads-project",
+  "version": 1,
+  "name": "Hello Nova",
+  "mode": "3d2d",
+  "background_top": "#88B5D4",
+  "background_bottom": "#263C58",
+  "objects": [
+    {
+      "id": 1,
+      "type": "Cube3D",
+      "name": "Rotating Cube",
+      "screen": "top",
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "size": 1.55,
+      "spin": 1.1,
+      "color": "#F0B475"
+    },
+    {
+      "id": 2,
+      "type": "Sprite2D",
+      "name": "Nova",
+      "screen": "bottom",
+      "x": 120,
+      "y": 88,
+      "speed": 2,
+      "controllable": true,
+      "color": "#DAB17A"
+    }
+  ]
+}

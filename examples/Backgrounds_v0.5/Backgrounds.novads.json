@@ -1,0 +1,59 @@
+{
+  "format": "novads-project",
+  "version": 5,
+  "name": "NovaDS - Tile BG and Affine Demo",
+  "mode": "2d2d",
+  "background_top": "#80C2E4",
+  "background_bottom": "#416754",
+  "assets": {
+    "nova": {
+      "path": "assets/nova.png"
+    }
+  },
+  "background_layers": {
+    "top": {
+      "path": "assets/meadow.png",
+      "affine": false,
+      "scroll_x": 0.0,
+      "scroll_y": 0.0,
+      "angle": 0.0,
+      "scale": 1.0
+    },
+    "bottom": {
+      "path": "assets/floor.png",
+      "affine": true,
+      "scroll_x": 0.0,
+      "scroll_y": 0.0,
+      "angle": 0.0,
+      "scale": 1.0
+    }
+  },
+  "objects": [
+    {
+      "id": 2,
+      "type": "Sprite2D",
+      "name": "Nova",
+      "screen": "bottom",
+      "x": 120,
+      "y": 80,
+      "speed": 2,
+      "controllable": false,
+      "asset": "nova",
+      "color": "#FFFFFF",
+      "script": "scripts/demo.lua"
+    },
+    {
+      "id": 3,
+      "type": "Sprite2D",
+      "name": "Second Nova",
+      "screen": "top",
+      "x": 190,
+      "y": 100,
+      "speed": 0,
+      "controllable": false,
+      "asset": "nova",
+      "color": "#FFFFFF",
+      "script": ""
+    }
+  ]
+}

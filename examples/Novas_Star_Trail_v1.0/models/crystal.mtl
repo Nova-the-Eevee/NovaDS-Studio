@@ -1,0 +1,6 @@
+newmtl bright
+Kd 0.9569 0.8980 0.4118
+
+newmtl shadow
+Kd 0.9020 0.5725 0.3176
+

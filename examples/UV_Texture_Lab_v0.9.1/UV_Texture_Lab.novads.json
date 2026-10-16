@@ -1,0 +1,66 @@
+{
+  "format": "novads-project",
+  "version": 5,
+  "name": "UV Texture Lab v0.9.1",
+  "mode": "3d2d",
+  "background_top": "#53698B",
+  "background_bottom": "#263C58",
+  "mesh_assets": {
+    "checker": {
+      "path": "models/checker_cube.obj",
+      "target_triangles": 0
+    }
+  },
+  "camera_3d": {
+    "x": 0,
+    "y": 0,
+    "z": 5,
+    "yaw": 0,
+    "pitch": 0,
+    "fov": 65
+  },
+  "assets": {
+    "nova": {
+      "path": ":builtin/nova.png"
+    }
+  },
+  "background_layers": {},
+  "extra_background_layers": {},
+  "camera_follow": {},
+  "objects": [
+    {
+      "id": 1,
+      "type": "Mesh3D",
+      "name": "UV-mapped cube",
+      "screen": "top",
+      "scene": "Main",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "size": 2.4,
+      "spin": 0.7,
+      "rot_x": 0,
+      "rot_y": 0,
+      "rot_z": 0,
+      "mesh": "checker",
+      "color": "#FFFFFF"
+    },
+    {
+      "id": 2,
+      "type": "Sprite2D",
+      "name": "Nova",
+      "screen": "bottom",
+      "x": 120,
+      "y": 88,
+      "speed": 2,
+      "controllable": true,
+      "asset": "nova",
+      "color": "#FFFFFF"
+    }
+  ],
+  "scenes": [
+    "Main"
+  ],
+  "active_scene": "Main",
+  "sounds": {}
+}

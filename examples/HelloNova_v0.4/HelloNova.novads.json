@@ -1,0 +1,99 @@
+{
+  "format": "novads-project",
+  "version": 4,
+  "name": "Hello Nova - REAL Lua 5.4",
+  "mode": "3d2d",
+  "background_top": "#88B5D4",
+  "background_bottom": "#263C58",
+  "assets": {
+    "nova": {
+      "path": "assets/nova.png"
+    },
+    "star": {
+      "path": "assets/star.png"
+    },
+    "bubble": {
+      "path": "assets/bubble.png"
+    }
+  },
+  "objects": [
+    {
+      "id": 1,
+      "type": "Cube3D",
+      "name": "Rotating Cube",
+      "screen": "top",
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "size": 1.55,
+      "spin": 0.0,
+      "color": "#F0B475",
+      "script": "scripts/cube_rotate.lua"
+    },
+    {
+      "id": 2,
+      "type": "Sprite2D",
+      "name": "Nova",
+      "screen": "bottom",
+      "x": 120,
+      "y": 88,
+      "speed": 2,
+      "controllable": false,
+      "asset": "nova",
+      "color": "#FFFFFF",
+      "script": "scripts/nova_movement.lua"
+    },
+    {
+      "id": 3,
+      "type": "Sprite2D",
+      "name": "Second Nova",
+      "screen": "bottom",
+      "x": 44,
+      "y": 48,
+      "speed": 0,
+      "controllable": false,
+      "asset": "nova",
+      "color": "#FFFFFF",
+      "script": "scripts/second_nova.lua"
+    },
+    {
+      "id": 4,
+      "type": "Sprite2D",
+      "name": "Little Star",
+      "screen": "bottom",
+      "x": 185,
+      "y": 52,
+      "speed": 0,
+      "controllable": false,
+      "asset": "star",
+      "color": "#FFFFFF",
+      "script": "scripts/star_jump.lua"
+    },
+    {
+      "id": 5,
+      "type": "Sprite2D",
+      "name": "Big Bubble",
+      "screen": "bottom",
+      "x": 30,
+      "y": 124,
+      "speed": 0,
+      "controllable": false,
+      "asset": "bubble",
+      "color": "#FFFFFF",
+      "script": ""
+    },
+    {
+      "id": 6,
+      "type": "Cube3D",
+      "name": "Second Cube",
+      "screen": "top",
+      "x": -1.9,
+      "y": 0.0,
+      "z": 1.5,
+      "size": 0.55,
+      "spin": -0.8,
+      "color": "#75C5EA",
+      "script": ""
+    }
+  ]
+}
